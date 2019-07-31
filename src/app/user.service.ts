@@ -23,12 +23,12 @@ export class UserService {
   }
 
   put(id: number, values: Object = {}): Users {
-    let user = this.getuserbyid(id);
-    if (!user) {
+    let updatevalue = this.getuserbyid(id);
+    if (!updatevalue) {
       return null;
     }
-    Object.assign(user, values);
-    return user;
+    Object.assign(updatevalue, values);
+    return updatevalue;
   }
 
   getuserbyid(id: number): Users {
