@@ -1,0 +1,30 @@
+<h3>User Detail</h3>
+
+You have selected id: {{ userid}}
+
+<div class="container">
+    <div class="form-group" style="width: 250px;">
+
+        <input type="number" disabled name="id" [(ngModel)]="User.id" value={{User.id}} class="form-control">
+
+
+        <input type="text" name="username" [(ngModel)]="User.name" value={{User.name}} class="form-control">
+
+
+        <input type="number" name="age" [(ngModel)]="User.Age" value={{User.Age}} class="form-control">
+
+    </div>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-dark" (click)="Onupdate(User)">Update Data</button>
+</div>
+
+<button class="btn-primary" (click)="OnBack()">Back</button>
+
+<button class="btn-primary" (click)="OnPrevious()">Previous</button>
+<button class="btn-primary" (click)="OnNext()">Next</button>
+<hr style="width: 20px;">
+
+
+<router-outlet></router-outlet>

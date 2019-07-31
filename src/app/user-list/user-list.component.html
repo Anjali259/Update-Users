@@ -1,0 +1,19 @@
+<div class='table-responsive'>
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let User of Users;">
+                <td>{{User.id}}</td>
+                <td><a [routerLink]="['/User', User.id]">{{User.name}}</a></td>
+                <td>{{User.Age}}</td>
+                <td><button [routerLink]="['/User', User.id]">Edit User</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
